@@ -74,21 +74,39 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/named-exports.min.js"></script>
   <% } %>
   <style>
-      html {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          font-family: 'Righteous', cursive;
-      }
+    html {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      font-family: 'Righteous', cursive;
+      color: #352B26;
+    }
 
-      body {
-        margin: 0;
-      }
+    body {
+      margin: 0;
+    }
 
-      body, main, #single-spa-application\:\@lauta\/main {
-          flex: 1;
-          display: flex;
-      }
+    body, main, #single-spa-application\:\@lauta\/main {
+      flex: 1;
+      display: flex;
+    }
+
+    #single-spa-application\:\@lauta\/left-panel, #single-spa-application\:\@lauta\/right-panel {
+      position: fixed;
+      top: 25%;
+      width: 35%;
+      border: 2px solid;
+      height: 60%;
+      border-radius: 10%;
+    }
+
+    #single-spa-application\:\@lauta\/left-panel {
+      left: 10%;
+    }
+
+    #single-spa-application\:\@lauta\/right-panel {
+      left: 55%;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
