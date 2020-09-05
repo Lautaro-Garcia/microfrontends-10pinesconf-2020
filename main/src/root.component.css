@@ -1,0 +1,25 @@
+section#main {
+  flex: 1;
+  position: relative;
+  background: rgb(247, 147, 30);
+  background: linear-gradient(
+    135deg,
+    rgba(247, 147, 30, 1) 0%,
+    rgba(237, 28, 36, 1) 100%
+  );
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 8%;
+  font-size: 4rem;
+}
+
+img#logo {
+  width: 10%;
+  max-width: 110px;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}

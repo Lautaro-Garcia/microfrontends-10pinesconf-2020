@@ -5,7 +5,8 @@
 Este repo tiene tres aplicaciones:
 
 1. La configuración principal, que se encarga de montar los otros dos microfrontends
-2. Un microfrontend para cada panel
+2. Un microfrontend para el fondo, el título principal y el logo
+3. Un microfrontend para cada panel
 
 ### ¿Cómo se levanta todo?
 

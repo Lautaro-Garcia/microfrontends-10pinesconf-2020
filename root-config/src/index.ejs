@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
+  <title>10Pines Conf 2020</title>
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -49,7 +49,8 @@
       "imports": {
         "@lauta/root-config": "//localhost:9000/lauta-root-config.js",
         "@lauta/left-panel": "//localhost:8080/lauta-left-panel.js",
-        "@lauta/right-panel": "//localhost:8081/lauta-right-panel.js"
+        "@lauta/right-panel": "//localhost:8081/lauta-right-panel.js",
+        "@lauta/main": "//localhost:8082/lauta-main.js"
       }
     }
   </script>
@@ -72,9 +73,31 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/amd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/named-exports.min.js"></script>
   <% } %>
+  <style>
+      html {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          font-family: 'Righteous', cursive;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      body, main, #single-spa-application\:\@lauta\/main {
+          flex: 1;
+          display: flex;
+      }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main></main>
+  <main>
+    <div id="single-spa-application:@lauta/main"></div>
+    <div id="single-spa-application:@lauta/left-panel"></div>
+    <div id="single-spa-application:@lauta/right-panel"></div>
+  </main>
   <script>
     System.import('@lauta/root-config');
   </script>
