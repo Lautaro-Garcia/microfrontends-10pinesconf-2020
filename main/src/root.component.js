@@ -6,13 +6,32 @@ import { slides } from "./slides";
 export default class Root extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { indiceSlideActual: 0 };
+    this.state = {
+      indiceSlideActual: this.obtenerNumeroDeSlidePorQueryParam(),
+    };
   }
 
   cambiarASlide(direccion) {
     const nuevoIndice = this.state.indiceSlideActual + direccion;
-    history.pushState({}, "", "/?i=" + nuevoIndice);
+    this.guardarIndiceEnQueryParams(nuevoIndice);
+    this.comunicarAOtrosMicrofrontends(nuevoIndice);
     this.setState({ indiceSlideActual: nuevoIndice });
+  }
+
+  guardarIndiceEnQueryParams(nuevoIndice) {
+    history.pushState({}, "", "/?i=" + nuevoIndice);
+  }
+
+  comunicarAOtrosMicrofrontends(nuevoIndice) {
+    const eventoCambioDeSlide = new CustomEvent("slide", {
+      detail: nuevoIndice,
+    });
+    const microfrontends = window.document.querySelectorAll(
+      "[id^='single-spa-application:@lauta/']:not(#single-spa-application\\:\\@lauta\\/main)"
+    );
+    microfrontends.forEach((microfrontend) =>
+      microfrontend.dispatchEvent(eventoCambioDeSlide)
+    );
   }
 
   obtenerNumeroDeSlidePorQueryParam() {

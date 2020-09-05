@@ -1,10 +1,5 @@
 import { registerApplication, start } from "single-spa";
 
-// Naranjita -> #F7931E
-// Rojito -> #ED1C24
-// Negro pinero -> #352B26
-// Verdecito -> #cdee96
-
 registerApplication({
   name: "@lauta/left-panel",
   app: () => System.import("@lauta/left-panel"),
