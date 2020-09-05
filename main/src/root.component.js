@@ -10,9 +10,19 @@ export default class Root extends React.Component {
   }
 
   cambiarASlide(direccion) {
-    this.setState({
-      indiceSlideActual: this.state.indiceSlideActual + direccion,
-    });
+    const nuevoIndice = this.state.indiceSlideActual + direccion;
+    history.pushState({}, "", "/?i=" + nuevoIndice);
+    this.setState({ indiceSlideActual: nuevoIndice });
+  }
+
+  obtenerNumeroDeSlidePorQueryParam() {
+    const queryparams = new URL(document.location);
+    const indicePorQueryparam = Number(queryparams.searchParams.get("i"));
+    if (isNaN(indicePorQueryparam)) {
+      return 0;
+    }
+
+    return indicePorQueryparam > slides.length ? 0 : indicePorQueryparam;
   }
 
   render() {
