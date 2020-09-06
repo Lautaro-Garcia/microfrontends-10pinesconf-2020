@@ -2,7 +2,7 @@ import React from "react";
 import "./slide10.css";
 
 export const Slide10 = () => (
-  <div id="left-slide10">
+  <div id="right-slide10">
     <ul>
       <li>
         Hay que tener un ojo en la performance. Puede pasar que cargue varias

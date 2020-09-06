@@ -1,6 +1,5 @@
 import React from "react";
 import "./slide3.css";
-import me from "../../assets/me.gif";
 
 export const Slide3 = () => (
   <div id="left-slide3">
