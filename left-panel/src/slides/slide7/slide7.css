@@ -1,0 +1,13 @@
+#left-slide7 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#left-slide7 img {
+  width: 90%;
+}
