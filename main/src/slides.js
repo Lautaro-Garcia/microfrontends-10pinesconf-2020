@@ -3,5 +3,7 @@ export const slides = [
   { titulo: "Para quienes recuerden" },
   { titulo: "Entonces... ¿qué era un microfrontend?" },
   { titulo: "Entonces... ¿qué era un microfrontend?" },
+  { titulo: "Lección #1: Desacoplamiento" },
   { titulo: "Lección #1: MESSAGING" },
+  { titulo: "Lección #2: Cambiar el marco require planificación" },
 ];

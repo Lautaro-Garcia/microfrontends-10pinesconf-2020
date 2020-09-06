@@ -1,6 +1,4 @@
 #right-slide5 {
-  flex: 1;
-  align-self: flex-end;
-  text-align: center;
-  font-size: 5rem;
+  padding-left: 20px;
+  font-size: 2.5rem;
 }
