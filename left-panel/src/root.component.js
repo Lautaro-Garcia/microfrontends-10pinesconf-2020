@@ -1,17 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { Component } from "react";
 import "./root.component.css";
+import { slides } from "./slides";
 
-export default function Root(props) {
-  const panel = useRef();
-  useEffect(() => {
-    panel.current.parentElement.addEventListener("slide", (evento) =>
-      // eslint-disable-next-line no-console
-      console.log(`[Left-panel]: Número de slide ${evento.detail}`)
+export default class Root extends Component {
+  constructor(props) {
+    super(props);
+    this.panel = React.createRef();
+    this.state = { indiceSlide: -1 };
+    this.cambiarSlide = (evento) =>
+      this.setState({ indiceSlide: evento.detail });
+  }
+
+  componentDidMount() {
+    this.panel.current.parentElement.addEventListener(
+      "slide",
+      this.cambiarSlide
     );
-  }, [panel]);
-  return (
-    <section ref={panel} id="left">
-      {props.name} is mounted!
-    </section>
-  );
+  }
+
+  componentWillUnmount() {
+    this.panel.current.parentElement.removeEventListener(
+      "slide",
+      this.cambiarSlide
+    );
+  }
+
+  render() {
+    const Contenido = slides[this.state.indiceSlide];
+
+    return (
+      <section ref={this.panel} id="left">
+        {Contenido && <Contenido />}
+      </section>
+    );
+  }
 }

@@ -1,0 +1,15 @@
+#right-slide1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#right-slide1 p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#right-slide1 img {
+  width: 100%;
+}

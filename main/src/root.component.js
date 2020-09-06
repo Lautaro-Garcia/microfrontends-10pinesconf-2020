@@ -1,6 +1,6 @@
 import React from "react";
 import "./root.component.css";
-import logo from "./logo.png";
+import logo from "./assets/logo.png";
 import { slides } from "./slides";
 
 export default class Root extends React.Component {
@@ -42,6 +42,19 @@ export default class Root extends React.Component {
     }
 
     return indicePorQueryparam > slides.length ? 0 : indicePorQueryparam;
+  }
+
+  componentDidMount() {
+    this.montadoMicrofrontends = window.addEventListener(
+      "single-spa:first-mount",
+      () => {
+        this.comunicarAOtrosMicrofrontends(this.state.indiceSlideActual);
+      }
+    );
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(this.montadoMicrofrontends);
   }
 
   render() {
