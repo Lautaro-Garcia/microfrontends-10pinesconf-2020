@@ -9,4 +9,5 @@ export const titulos = [
   "Lección #4: THIS. IS. JAVASCRIPT",
   "Lección #5: Performance... ¿performance?",
   "Conclusiones",
+  "¡Muchas gracias!",
 ];

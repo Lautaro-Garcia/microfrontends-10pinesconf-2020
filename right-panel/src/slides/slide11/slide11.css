@@ -1,0 +1,14 @@
+#right-slide11 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#right-slide11 img {
+  width: 110%;
+  height: 110%;
+}
