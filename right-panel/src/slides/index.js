@@ -5,5 +5,15 @@ import { Slide4 } from "./slide4/Slide4";
 import { Slide5 } from "./slide5/Slide5";
 import { Slide6 } from "./slide6/Slide6";
 import { Slide7 } from "./slide7/Slide7";
+import { Slide8 } from "./slide8/Slide8";
 
-export const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7];
+export const slides = [
+  Slide1,
+  Slide2,
+  Slide3,
+  Slide4,
+  Slide5,
+  Slide6,
+  Slide7,
+  Slide8,
+];
