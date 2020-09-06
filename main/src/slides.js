@@ -1,5 +1,5 @@
 export const slides = [
   { titulo: "¡Holis!" },
-  { titulo: "Slide del medio" },
+  { titulo: "Para quienes recuerden" },
   { titulo: "¡Muchas gracias!" },
 ];

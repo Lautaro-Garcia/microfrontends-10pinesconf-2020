@@ -1,0 +1,27 @@
+#right-slide2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#right-slide2 img {
+  width: 90%;
+}
+
+#right-slide2 img#lauta {
+  position: absolute;
+  width: 150px;
+  bottom: 90px;
+  left: 90px;
+  transform: rotate(10deg);
+}
+
+#right-slide2 img#erik {
+  position: absolute;
+  width: 150px;
+  bottom: 100px;
+  right: 90px;
+  transform: rotate(-10deg);
+}
