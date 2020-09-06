@@ -7,4 +7,5 @@ export const slides = [
   { titulo: "Lección #2: MESSAGING" },
   { titulo: "Lección #3: Cambiar el marco require planificación" },
   { titulo: "Lección #4: THIS. IS. JAVASCRIPT" },
+  { titulo: "Lección #5: Performance... ¿performance?" },
 ];
