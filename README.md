@@ -5,13 +5,16 @@
 Este repo tiene tres aplicaciones:
 
 1. La configuración principal, que se encarga de montar los otros dos microfrontends
-2. Un microfrontend para el fondo, el título principal y el logo
+2. Un microfrontend para el fondo, el título principal y el footer (logo y nombre de la charla)
 3. Un microfrontend para cada panel
 
 ### ¿Cómo se levanta todo?
 
-En la carpeta de cada aplicación correr `npm start`.
-La aplicación principal se va a poder acceder en https://localhost:9000
+Como la mayoría de proyectos de Javascript, para descargar todas las dependencias de cada
+aplicación basta con correr `npm install` dentro de cada carpeta
 
-**Nota:** por simplicidad, las dependenias comunes (como `react`) se están cargando desde una cdn
-así que este ejemplo va a poder cargarse sólo desde un dispositivo conectado a internet
+En la carpeta de cada aplicación correr `npm start`.
+La aplicación principal se va a poder acceder en http://localhost:9000
+
+**Nota:** por simplicidad, las dependencias comunes (como `react`) se están cargando desde una cdn
+así que este ejemplo va a poder cargarse solo desde un dispositivo conectado a internet
