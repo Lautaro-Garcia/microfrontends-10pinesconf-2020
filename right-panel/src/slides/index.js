@@ -7,6 +7,7 @@ import { Slide6 } from "./slide6/Slide6";
 import { Slide7 } from "./slide7/Slide7";
 import { Slide8 } from "./slide8/Slide8";
 import { Slide9 } from "./slide9/Slide9";
+import { Slide10 } from "./slide10/Slide10";
 
 export const slides = [
   Slide1,
@@ -18,4 +19,5 @@ export const slides = [
   Slide7,
   Slide8,
   Slide9,
+  Slide10,
 ];

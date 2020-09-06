@@ -8,4 +8,5 @@ export const slides = [
   { titulo: "Lección #3: MESSAGING" },
   { titulo: "Lección #4: THIS. IS. JAVASCRIPT" },
   { titulo: "Lección #5: Performance... ¿performance?" },
+  { titulo: "Conclusiones" },
 ];
