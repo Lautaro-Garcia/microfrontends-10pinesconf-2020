@@ -1,6 +1,13 @@
 #left-slide6 {
-  flex: 1;
-  align-self: center;
-  text-align: center;
-  font-size: 5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#left-slide6 img {
+  width: 90%;
 }
