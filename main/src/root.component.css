@@ -52,3 +52,10 @@ button#slide-siguiente .chevron {
   right: 25px;
   top: calc(50% - (3rem / 2));
 }
+
+p#footer {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  font-size: 1.5rem;
+}

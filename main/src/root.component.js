@@ -54,7 +54,10 @@ export default class Root extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener(this.montadoMicrofrontends);
+    window.removeEventListener(
+      "single-spa:first-mount",
+      this.montadoMicrofrontends
+    );
   }
 
   render() {
@@ -76,6 +79,7 @@ export default class Root extends React.Component {
             <i className="chevron" />
           </button>
         )}
+        <p id="footer">Microfrontends: 1 año después</p>
         <img id="logo" src={logo} alt="logo" />
       </section>
     );
