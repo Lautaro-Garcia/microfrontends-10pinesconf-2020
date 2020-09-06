@@ -3,4 +3,5 @@ export const slides = [
   { titulo: "Para quienes recuerden" },
   { titulo: "Entonces... ¿qué era un microfrontend?" },
   { titulo: "Entonces... ¿qué era un microfrontend?" },
+  { titulo: "Lección #1: MESSAGING" },
 ];
