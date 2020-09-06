@@ -1,7 +1,7 @@
 import React from "react";
 import "./root.component.css";
 import logo from "./assets/logo.png";
-import { slides } from "./slides";
+import { titulos } from "./titulos";
 
 export default class Root extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ export default class Root extends React.Component {
       return 0;
     }
 
-    return indicePorQueryparam > slides.length ? 0 : indicePorQueryparam;
+    return indicePorQueryparam >= titulos.length ? 0 : indicePorQueryparam;
   }
 
   componentDidMount() {
@@ -63,12 +63,12 @@ export default class Root extends React.Component {
   render() {
     const { indiceSlideActual } = this.state;
     const esPrimerSlide = indiceSlideActual === 0;
-    const esUltimaSlide = indiceSlideActual === slides.length - 1;
-    const slideActual = slides[indiceSlideActual];
+    const esUltimaSlide = indiceSlideActual === titulos.length - 1;
+    const tituloActual = titulos[indiceSlideActual];
 
     return (
       <section id="main">
-        <h1>{slideActual.titulo}</h1>
+        <h1>{tituloActual}</h1>
         {esPrimerSlide ? undefined : (
           <button onClick={() => this.cambiarASlide(-1)} id="slide-anterior">
             <i className="chevron" />
